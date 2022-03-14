@@ -1,0 +1,48 @@
+MongoDB Complete Introduction & Summary:
+
+How it works
+
+BSON Data Format
+
+{
+ name:"max",
+ age:29,
+ address:
+        {
+         city:'BBSR'
+         },
+ hobbies:[
+        {name:'riding'},
+        {name:'sports'}
+       ]
+ 
+}
+
+Relation
+
+*Relation data needs
+
+Commands 
+
+1.show database :- show dbs
+2.switch db :- use first-test
+3.Insert data to db :- db.dbname.insertOne({name:'Max',age:29})
+  then it will show something
+ {
+   "acknowledged":true,
+   "insertedId":ObjectId("dfjaeie49334")
+}
+
+4.show all collection db:- show collections
+5.Find document in db :- db.dbname.find()
+6.clear screen:-cls
+7.Insert date to db inmany :-db.dbname.insertmany([{name:'Max',age:29}), {name:'sam',age:30}])
+
+  then it will show something
+ {
+   "acknowledged":true,
+   "insertedId":ObjectId("dfjaeie49334"),
+    "insertedId":ObjectId("dfjaeie49dff4")
+}
+
+8.

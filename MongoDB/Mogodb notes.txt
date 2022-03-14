@@ -1,0 +1,31 @@
+Loading Sample data:
+https://github.com/bstashchuk/MongoDB-Aggregation-Tutorial
+
+Aggregation Process - MongoDB Aggregation Tutorial
+
+Match Operation
+Group Operation
+
+Aggregation Expressions
+
+Expression refers to the name of the field in input documents.
+"$<filneName>"
+
+Examples :- {$group:{_id:"$age"}}
+            {$group:{_id:"$company.location.country"}}
+
+Aggregation Match :
+
+Match specific document using query
+
+{$match:{<query>}}
+
+Exaples :
+db.persons.aggreagate([
+     {$match:{age:{$gt:25}}}
+     ])
+
+Data Mondeling with MongoDB:
+
+Define the schema
+Develop the application and queries.

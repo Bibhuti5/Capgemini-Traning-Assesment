@@ -1,0 +1,36 @@
+No SQL Database
+
+1.History
+ Impedance Mismatch Problem
+ Integration Database
+
+Characteristics of NoSQL:-
+
+*Non relational
+*Open Source
+*Cluster-friendly
+*21st Century web
+*Schema-less
+
+
+NoSql Databases exemples:
+1.MongoDB
+2.CouchDB
+3.Key-value
+4.Graph
+5.riak
+6.redis
+7.Column-family
+8.Cassandra
+
+
+Implicit-schema:- anOrder["price"] * anOrder["quantity"]
+
+Graph 
+  """
+     START barbara=node:nodeIndex(name="Barbara")
+     MATCH (barbara)-[:FRIEND]->(friend_node)
+     RETURN friend_node.name,friend_node.location
+  """
+
+http://martinfowler.com/nosql.html

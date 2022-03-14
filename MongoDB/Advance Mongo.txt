@@ -1,0 +1,41 @@
+SQL VS MONGODB
+
+1.Data is stored in structed way and accessed easily and can be worked on effictively.
+2.MongoDB is a general purpose,document-based ,distributed database bulit form modern applction 
+3. Mongodb is used by million of developers to power the world's most innovative products and servies.
+4.Languages Supported
+
+*sql is the primary query language which is used and/or flavours of sql.
+*Mongodb supports json query language mostly to have to work with data.
+5.Data Storage
+ * SQL via tables and interlinked storage methods.
+ * Mongodb via key-value pairs and collection.
+6.Foreign key:
+
+ * sql uses foreign key for various purposes
+ * mongodb usase foreign key for database.
+7. Triggers Support.
+ *sql supports trigger.
+ *mongodb doesn't.
+8. Best fit
+
+Advantages of MongoDB
+
+1.NoSchema
+2.Easy Scalability 
+3.ACID properties at document level
+4.Failover machanism
+5.Authentication feature such as LDAP,AD
+6.Cost Effective.
+
+When to go for MongoDB :-
+https://www.studytonight.com/mongodb/why-switch-to-mongodb
+
+MongoDB Basics
+
+To starts mongodb:- mongod
+
+ 
+
+
+

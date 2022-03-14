@@ -1,0 +1,35 @@
+Indexing In MongoDB
+
+1.Indexes improve mongodb query exection.
+2.without index whole collection must be scanned.
+3.index stores sorted field values.
+4.If appropriate index exists.
+
+*B-tree index data structrue.
+
+Default mongodb index.
+*{_id:1} is default index in each MongoDB collection
+*Name of this index is _id.
+*Default _id index is unique.
+
+GetIndexes()
+
+*Returns current indexes for certain collection
+
+Creating New Indexes
+
+* Writes resulting documents to the Mongodb collection
+*db.colletions.createIndex({<keyname>:{-1|1}},<option>)
+
+Tyes of Indexes 
+
+:( Create index in the background,other operations will not be blocked.
+:( Create unique index.
+:( Specify name for the index.
+
+Unique Index:
+
+db.books.createIndex(
+   {index:1},
+   {unique:ture}
+)

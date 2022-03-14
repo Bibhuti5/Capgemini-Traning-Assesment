@@ -1,0 +1,90 @@
+MongoDB-Aggregation Exercises
+
+Atlanta Population
+
+1.Use db.zipcodes.find() to filter results to only the results where city is ATLANTA & state is GA
+
+db.zipcodes.findOne({city: 'ATLANTA'},{state:'GA'})
+
+2.Use db.zipcodes.aggregate with $match to do the same as above.
+db.zipcodes.aggregate(
+    [ { $match : {city: 'ATLANTA'}} ]
+)
+3.Use $group to count the number of zip codes in Atlant
+db.zipcodes.aggregate(
+    {$match:{city:'ATLANTA'}},
+    {$group:{_id:'$loc'}},
+    {$count:'loc'}
+)
+
+or 
+
+db.zipcodes.find({city: 'ATLANTA'}).count()
+
+4.Use $group to find the total population in Atlanta.
+db.zipcodes.aggregate(
+    {$match:{city:'ATLANTA'}},
+    {$group:{_id:'$pop'}},
+    {$count:'pop'}
+)
+
+Populations By state
+1.Use aggregate to calculate the total population for each state
+
+db.zipcodes.aggregate(
+    //Nor currect   
+    {$group:{_id:'$pop'}},
+     {$each:{state:'$state'}},
+    {$count:'pop'}
+)
+
+
+2.Sort the results by population , highest first
+db.zipcodes.aggregate(
+    // Sorting population highest first
+    {$sort:{state:1,pop:-1}}
+)
+
+3.Limit the results to just the first 3 results. What are the top 3 states in population.
+
+db.zipcodes.aggregate(
+    // Sorting population highest first 3 states
+    {$sort:{state:1,pop:-1}},
+    // Limit the for first 3 state
+    {$limit:3}
+)
+
+Population by City :
+1.Use aggregate to calculate the total population for each city.
+  Your can use a combination for the _id of the group.
+
+db.zipcodes.aggregate(
+    {$group:{_id:{pop:'$pop',city:'$city',state:'$state'}}},
+    {$count:'pop'}
+)
+
+2.Sort the reuslts by population, Highest first
+db.zipcodes.aggregate(
+    // Sorting population highest first 3 states
+    {$sort:{pop:-1}},
+    {$limit:3}
+)
+
+3.Limit the results to just the first 3 results. What are the top 3 states in population.
+
+db.zipcodes.aggregate(
+    // Sorting population highest first 3 states
+    {$sort:{city:1,pop:-1}},
+    // Limit the for first 3 state
+    {$limit:3}
+)
+4. What are the top 3 cities in population in Texas ?
+
+db.zipcodes.aggregate(
+    //State Texas
+     {$match:{state:'TX'}},
+    // Sorting population highest first 3 states
+     {$sort:{city:-1,pop:-1}},   
+    // Limit the for first 3 state
+    {$limit:3}
+)

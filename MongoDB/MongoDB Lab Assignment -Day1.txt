@@ -1,0 +1,138 @@
+** Get all document
+db.movies.find().pretty()
+** Get all document with writer set to "Quentin Tarantino"
+db.movies.findOne({writer:'Quentin Tarantino'})
+** Get all document with actors set to "Brad Pitt"
+db.movies.findOne({actors:'Brad Pitt'})
+** Get all document with franchise set to "The Hobbit"
+db.movies.findOne({franchise:'The Hobbit'})
+** Get all movies realesed in the 90s.
+db.movies.find({'year':{$lte:2000}})
+**get all movies released before the year 2000 or after 2010
+db.movies.find({$or:[{'year':{$lt:2000}},{'year':{$gt:2010}}]}).pretty()
+
+
+
+"""
+db.movies.insertOne({title: "The Hobbit: The Battle of the Five Armies",
+ writer: "J.R.R. Tolkein",
+ year: 2012,
+ franchise: "The Hobbit",
+ synopsis: "Bilbo and Company are forced to engage in a war against an array of combatants and keep the Lonely Mountain from falling into the hands of a rising darkness."})
+
+ db.movies.update({"_id" :ObjectId("620b50d2bf19ae47991fefc7") },{$set : {'synopsis':'A relutant hobbit,Bilbo Baggins,sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home - and the gold wihtin it -from the dragon Smaug'}})
+"""
+
+db.movies.findOne({synopsis:{$regex:'Bilbo'}})
+db.movies.findOne({synopsis:{$regex:'Gandalf'}})
+
+db.movies.find({synopsis:[{$not:{$regex:'Bilbo'}},{$not:{$regex:'Gandalf'}}]}).pretty()
+
+
+Relationships :-
+
+**** Insert document into a users collection.
+db.users.insertMany([
+{
+username : "GoodGuyGreg",
+first_name : "Good Guy",
+last_name : "Greg"
+},
+{
+username : "ScumbagSteve",
+full_name : {
+first : "Scumbag",
+last : "Steve",
+}
+}
+])
+
+****Insert the following document into a post collection
+
+db.posts.insertMany([
+{
+_id: 1,
+username : "GoodGuyGreg",
+title : "Passes out at party",
+body : "Wakes up early and cleans house",
+},
+{
+_id: 2,
+username : "GoodGuyGreg",
+title : "Steals your identity",
+body : "Raises your credit score",
+},
+{
+_id: 3,
+username : "GoodGuyGreg",
+title : "Reports a bug in your code",
+body : "Sends you a Pull Request",
+},
+{
+_id: 4,
+username : "ScumbagSteve",
+title : "Borrows something",
+body : "Sells it",
+},
+{
+_id: 5,
+username : "ScumbagSteve",
+title : "Borrows everything",
+body : "The end",
+},
+{
+_id: 6,
+username : "ScumbagSteve",
+title : "Forks your repo on github",
+body : "Sets to private",
+},
+])
+
+
+****Insert document into a comments collection
+
+db.comments.insertMany([
+{
+username : "GoodGuyGreg",
+comment : "Hope you got a good deal!",
+post : 4,
+},
+{
+username : "GoodGuyGreg",
+comment : "What's mine is yours!",
+post : 5,
+},
+{
+username : "GoodGuyGreg",
+comment : "Don't violate the licensing agreement!",
+post : 6,
+},
+{
+username : "ScumbagSteve",
+comment : "It still isn't clean",
+post : 1,
+},
+{
+username : "ScumbagSteve",
+comment : "Denied your PR cause I found a hack",
+post : 3
+},
+])
+
+Querying related collections
+
+1.Find all users
+df.users.find().pretty()
+2.Find all posts
+df.posts.find().pretty()
+3.Find all posts that was authored by "GoodGuyGreg"
+db.posts.find({username :'GoodGuyGreg'})
+4.Find all posts that was authored by "ScumbagSteve"
+db.posts.find({username:'ScumbagSteve'})
+5.Find all comments .
+db.comments.find().prettu()
+6.Find all comments that was authored by "GoodGuyGreg"
+db.comments.find({username:'GoodGuyGreg'})
+7.Find all comments that was authored by "ScumbagSteve"
+db.comments.find({username:'ScumbagSteve'})
+8.Find all comments belonging to the post "Reports a bug in your code"

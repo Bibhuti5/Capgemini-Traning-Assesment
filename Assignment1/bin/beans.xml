@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+	<bean id="address1" class="com.cg.model.Address">
+		<property name="street" value="Adaspur"></property>
+		<property name="city" value="cuttack"></property>
+		<property name="country" value="India"></property>
+		<property name="state" value="Odisha"></property>
+		<property name="zip" value="53432"></property>
+	</bean>
+	<bean id="customer1" class="com.cg.model.Customer">
+		<property name="customerName" value="Bibhuti Bhusan Sahoo"></property>
+		<property name="customerId" value="25"></property>
+		<property name="customerContact" value="892932"></property>
+		<property name="customerAddress" ref="address1"></property>
+	</bean>
+
+	<bean id="address2" class="com.cg.model.Address">
+		<property name="street" value="Kubar Shai"></property>
+		<property name="city" value="Bhubanswar"></property>
+		<property name="country" value="India"></property>
+		<property name="state" value="Odisha"></property>
+		<property name="zip" value="751024"></property>
+	</bean>
+	<bean id="customer2" class="com.cg.model.Customer">
+		<property name="customerName" value="Bhusan Sahoo"></property>
+		<property name="customerId" value="24"></property>
+		<property name="customerContact" value="3232"></property>
+		<property name="customerAddress" ref="address2"></property>
+	</bean>
+</beans>

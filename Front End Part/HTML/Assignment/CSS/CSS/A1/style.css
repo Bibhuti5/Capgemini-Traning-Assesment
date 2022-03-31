@@ -1,0 +1,23 @@
+body {
+    font-family:'Roboto', sans-serif;
+  }
+  
+  header {
+    background: dodgerblue;
+    display: block;
+  }
+  
+  .pg,
+  .pg3 {
+    background: rgb(153, 149, 181);
+  }
+  
+  p,
+  h1 {
+    margin: 0;
+    padding-bottom: 10px;
+  }
+  
+  body {
+    background-color: rgb(197, 234, 247);
+  }

@@ -1,0 +1,18 @@
+body {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  th,
+  td,
+  table {
+    border-style: solid;
+    border-width: 1px;
+  }
+  
+  table {
+    border-collapse: collapse;
+    border-top-color: black;
+    border-top-width: 2px;
+    border-bottom-color: black;
+    border-bottom-width: 2px;
+  }

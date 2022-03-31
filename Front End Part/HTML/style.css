@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+input[type="text"],
+input[type="email"] {
+    font-size: 1.6rem;
+    color: #010100;
+    width: 100%;
+    line-height: 65px;
+    padding-left: 3rem;
+}
+
+select {
+    width: 100%;
+    height: 65px;
+    color: #010100;
+    padding-left: 3rem;
+}
+
+.h1,
+h1 {
+    font-size: 36px;
+}
+
+.h1,
+.h2,
+.h3,
+h1,
+h2,
+h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.text-white {
+    color: #fff !important;
+}
+
+.font-w400 {
+    font-weight: 400;
+}
+
+.padding-top-xl {
+    padding-top: 5rem !important;
+}
+
+.padding-bottom-xl {
+    padding-bottom: 5rem !important;
+}
+
+.margin-top-m {
+    margin-top: 3rem !important;
+}
+
+.margin-bottom-m {
+    margin-bottom: 3rem !important;
+}
+
+.section5 h2 {
+    line-height: 35px;
+}
+
+.section5 p {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.has-error input[type="text"],
+.has-error input[type="email"],
+.has-error select {
+    border: 1px solid #a94442;
+}

@@ -1,0 +1,41 @@
+body {
+    font-family: 'Anaheim';
+    font-size: 1.2em;
+    background-image: url("a.jpg");
+    background-size: cover;
+  }
+
+
+form {
+    
+    margin: 0 auto;
+    width: 70%;
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+    
+  }
+ .regform{
+     background-color:rgba(88, 83, 83, 0.3);
+ } 
+  h1 {
+    font-size: 1.5em;
+    text-align: center;
+    text-transform: capitalize;
+  }
+  button{
+    background: #d2eb62;
+    font-size: 1.2em;
+    
+
+
+  }
+  #outside {
+    background-color: rgb(122, 165, 194);
+    background-image: url("a.jpg");
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+ 
+
+

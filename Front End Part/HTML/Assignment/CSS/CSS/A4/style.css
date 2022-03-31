@@ -1,0 +1,22 @@
+body {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  a {
+    font-weight: bold;
+  }
+  
+  a:link {
+    color: red;
+  }
+  
+  a:visited {
+    color: green;
+  }
+  
+  a:hover {
+    color: lightcoral;
+  }
+  body {
+    background-color: rgb(197, 234, 247);
+  }

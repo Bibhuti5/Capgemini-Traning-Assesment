@@ -1,0 +1,32 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: #efefef;
+    font-family: Ubuntu, sans-serif;
+}
+.search{
+    text-align: right;
+
+}
+form{
+     margin: 5px;
+     padding: 10px;
+}
+input{
+    margin: 5px;
+    padding: 5px;
+    border-radius: 4px;
+    border:none;
+    background-color: skyblue;
+    color: white;
+}
+h2{
+    text-align: left;
+    font-weight: 400;
+}
+.deep{
+    background-color: yellow;
+    color:blue;
+}

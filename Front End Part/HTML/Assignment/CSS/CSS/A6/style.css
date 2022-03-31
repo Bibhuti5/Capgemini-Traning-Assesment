@@ -1,0 +1,15 @@
+body {
+    font-family: 'Roboto', sans-serif;
+  }
+  th,
+td,
+table {
+  border-style: solid;
+  border-width: 1px;
+  border-color: green;
+}
+
+th {
+  background-color: green;
+  color: white;
+}

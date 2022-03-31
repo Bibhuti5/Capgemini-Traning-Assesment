@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  /*Header*/
+  header{
+    padding-top: 40px;
+    background: #bf850f;
+    color: #ffffff;
+    text-align:center;
+    min-height: 60vh;
+  }
+  header p{
+    font-size: 24px;
+    color: #ebe5da;
+  }
+  
+  .site-name .site-info{
+    float: left;
+  }
+  .nav{
+    float: right;
+    margin-top: -12px;
+  }
+  .nav a{
+    display: inline;
+  }
+  .button_1{
+    display: block;
+    color: white;
+    padding: 5px 5px 5px 5px;
+    background: blue;
+    border-radius: 15px;
+    text-decoration: none;
+    width: auto;
+    cursor: pointer;
+    text-align: center;
+    min-height: 30px;
+  }
+  .button_1:hover{
+    background-color: yellow;
+    color: black;
+  }
+  .register{
+    width: 100%;
+    align-content: center;
+  }
+  .reg_button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    align-self: center;
+    float: center;
+    display: block;
+    background: blue;
+    color: white;
+    border-radius: 15px;
+    padding: 10px 10px 10px 10px;
+    cursor: pointer;
+    min-height: 24px;
+    text-decoration: none;
+    text-align: center;
+    width:20%;
+  }
+  .reg_button:hover{
+    color: black;
+    background-color: rgb(22, 233, 215);
+  }
+  #jump-topics{
+    overflow: hidden;
+    width: 100%;
+    align-items: center;
+  }
+  .jump-topics{
+    display: flex;
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 30px;
+    padding:16px;
+    overflow: hidden;
+  
+  }
+  .topic{
+    background-color: #cacbcc;
+    text-align: center;
+    overflow:hidden;
+  }
+  .ima{
+    width:75%;
+    padding:5px;
+  }
+  footer{
+    text-align: center;
+    font-size: 14px;
+    background: #0fc2c9;
+    min-height: 20vh;
+  }
+  .topic-info{
+    padding: 16px;
+  }

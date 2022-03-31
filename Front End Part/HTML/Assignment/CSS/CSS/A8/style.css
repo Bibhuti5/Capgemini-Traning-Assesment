@@ -1,0 +1,19 @@
+body {
+    font-family: 'Roboto', sans-serif;
+  }
+  p {
+    background-color: rgb(197, 234, 247);
+  }
+  
+  #p1 {
+    border-style: solid;
+    border-width: 6px;
+  }
+  #p2 {
+    border-style: solid;
+    border-width: 4px;
+  }
+  #p3 {
+    border-style: solid;
+    border-width: 2px;
+  }

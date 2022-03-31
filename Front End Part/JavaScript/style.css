@@ -1,0 +1,15 @@
+
+body{
+    background: rgb(124, 142, 240);
+}
+#colour-changer{
+    width: 300px;
+    height: 200px;
+    margin: 20px auto;
+    border: 1px solid #000;
+    background: #fff;
+
+    -webkit-transition: background 0.7s;
+    -moz-transition: background 0.7s;
+    transition: background 0.7s;
+}

@@ -1,0 +1,14 @@
+body {
+    font-family: 'Roboto', sans-serif;
+  }
+  h2 {
+    text-decoration-line: line-through;
+  }
+  
+  h3 {
+    text-decoration-line: underline;
+  }
+  
+  body {
+    background-color: rgb(197, 234, 247);
+  }

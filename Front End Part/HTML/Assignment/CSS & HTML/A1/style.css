@@ -1,0 +1,100 @@
+*{
+	margin:5px;
+	padding:5px;
+	background-color:skyblue;
+	
+ }
+ 
+h1{
+	font-size: 60px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	color:white;
+	
+	
+}
+h2{
+	font-size: 20px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	text-align:center;
+	justify-content: center;
+	align-items: center;
+	color:white;
+}
+img{
+	background-attachment: fixed;
+	width:1270px;
+	height:900px;
+	align-items:center;
+	border-radius:100px;
+	justify-content:center;
+	font-style: italic;
+    font-size: smaller;
+    text-indent: 0;
+		
+}
+figcaption{
+	text-align:center;
+	color:black;
+}
+h3 {
+	font-size: 30px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	color:white;
+}
+h4{
+	font-size: 20px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	color:white;
+}
+p{
+	font-size: 18px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	color:white;
+}
+ul li {
+  font-size:20px;
+  font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	color:white;
+  
+}
+blockquote {
+  font-style:italic;
+  font-size:18px;
+  color:gray;
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding:5px;
+  width: 100%;
+  background-color: white;
+  color: black;
+  text-align: center;
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q2_2</title>
+</head>
+<body>
+<p id= "demo"></p>
+<p id= "demo1"></p>
+<script type="text/javascript">
+   var num=[4, 3, 1];
+   document.getElementById('demo').innerHTML=num;
+   document.getElementById('demo1').innerHTML=myfun(num);
+   function myfun(arr) {
+   return Math.max.apply(null, arr);
+   }
+</script>
+</body>
+</html>

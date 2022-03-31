@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Recursive map</title></head>
+    <body>
+        <div id="result"></div>
+
+        <script>
+            function map(arr,square)
+            {
+                var squares=[];
+                while(arr.length!=0)
+                    return squares.concat(square(arr.slice(0,1)),map(arr.slice(1),square));
+            }
+
+            function map(arr,sqrRoot)
+            {
+                var sqrRoots=[];
+                while(arr.length!=0)
+                    return sqrRoots.concat(sqrRoot(arr.slice(0,1)),map(arr.slice(1),sqrRoot));
+            }
+            
+            var square = num => num*num;
+            var sqrRoot = num => Math.sqrt(num);
+
+            var array=[1,4,9,16,25];
+            document.getElementById("result").innerHTML= "Input array: "+array+ "<br>The Squares: " +map(array,square);
+            document.getElementById("result").innerHTML+= " <br>The Square roots: " +map(array,sqrRoot);
+        
+        </script>
+    </body>
+</html>

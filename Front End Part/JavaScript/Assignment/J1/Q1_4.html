@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function coinFlip() {
+          return(Math.random() < 0.7) ? 'Heads' : 'Tails';
+    }
+
+ var howManyTimes=10;
+ var countHeads=0;
+ for (var i=0; i<howManyTimes;i++){
+     if (coinFlip()==='Heads'){
+       countHeads++;
+     }
+ }
+ alert("Heads appear "+(countHeads/howManyTimes));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

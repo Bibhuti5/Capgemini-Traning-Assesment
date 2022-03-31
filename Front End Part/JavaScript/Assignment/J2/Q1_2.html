@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Composed value function</title></head>
+    <body>
+        <div>
+            enter value: <input type="number" id="number"> <br> <br>
+            <button onclick="findComposed(); return false;">Find</button>
+        </div>
+        <p id="result"></p>
+
+
+        <script>
+            function compose(square,double){
+                return function(num){
+                     return square(double(num)); 
+                };
+            };
+
+            function compose(double,square){
+                return function(num){
+                     return double(square(num)); 
+                };
+            };
+
+            var square = x => x*x;
+            var double = x => x*2;
+
+            function findComposed()
+            {
+                var num = document.getElementById("number").value;
+                var f1=compose(square,double);
+                var f2=compose(double,square);
+                document.getElementById("result").innerHTML="F1: " +f1(num);
+                document.getElementById("result").innerHTML+="<br>F2: "+f2(num);
+            }
+        </script>
+    </body>
+</html>
